@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <title>Search Results</title>
+  </head>
+  <body>
+    <div class="container">
+      {% for car in matches %}
+        <h1>{{ car.getModel }}</h1>
+        <img src= "{{ car.getImage }}" width='30%'>
+        <h2>{{ car.getPrice }}</h2>
+        <h2>{{ car.getMiles }}</h2>
+      {% endfor %}
+    </div>
+  </body>
+</html>

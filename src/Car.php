@@ -44,14 +44,21 @@
     {
       return $this->image;
     }
-  }
-/*
-  $cars_matching_search = array();
-  foreach ($cars as $car) {
-    if ( ($car->getPrice() <= $_GET["price"]) && ($car->getMiles() <= $_GET["mileage"]) ) {
-      array_push($cars_matching_search, $car);
+
+    function save()
+    {
+        array_push($_SESSION['list_of_cars'], $this);
+    }
+
+    static function getAll()
+    {
+      return $_SESSION['list_of_cars'];
+    }
+
+    static function deleteAll()
+    {
+      $_SESSION['list_of_cars'] = array();
     }
   }
-*/
 
 ?>
